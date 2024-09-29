@@ -6,7 +6,10 @@
 </head>
 <body>
     <h1>Home Page!</h1>
-    <p>Hello {{content}}!</p>
-    <p>{{r}}</p>
+    {% for i in range(r) %}
+        {% if i % 2 == 1 %}
+            <p>{{i}}: {{content}}</p>
+        {% endif %}
+    {% endfor %}
 </body>
 </html>
